@@ -111,7 +111,7 @@ const TransformationForm = ({
     fieldName: string,
     value: string,
     type: TransformationTypeKey,
-    onChange: (value: string) => void,
+    onChangeField: (value: string) => void,
   ) => {
     debounce(() => {
       setNewTransformation((prevState: any) => ({
@@ -122,6 +122,8 @@ const TransformationForm = ({
         },
       }));
     }, 1000);
+
+    return onChangeField(value);
   };
 
   return (
