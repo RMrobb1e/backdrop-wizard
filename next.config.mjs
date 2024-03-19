@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        domain: "res.cloudinary.com",
+        hostname: "res.cloudinary.com",
         port: "",
       },
     ],
