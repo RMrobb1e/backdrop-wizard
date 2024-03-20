@@ -289,7 +289,7 @@ const TransformationForm = ({
             render={({ field }) => (
               <MediaUploader
                 setImage={setImage}
-                onValueChange={field.change}
+                onValueChange={field.onChange}
                 publicId={field.value}
                 image={image}
                 type={type}
