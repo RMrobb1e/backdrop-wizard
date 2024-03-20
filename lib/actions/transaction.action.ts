@@ -18,7 +18,7 @@ export const checkoutCredits = async (
     line_items: [
       {
         price_data: {
-          currency: "usd",
+          currency: "inr", // For the sake of testing Stripe we are using INR for now
           product_data: {
             name: transaction.plan,
           },
