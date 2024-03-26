@@ -96,7 +96,10 @@ export const Collection = ({
 const Card = ({ image }: { image: IImage }) => {
   return (
     <li>
-      <Link href={`/transformations/${image._id}`} className="collection-card">
+      <Link
+        href={`/transformations/${image._id.toString()}`}
+        className="collection-card"
+      >
         <CldImage
           src={image.publicId}
           alt={image.title}
@@ -117,7 +120,7 @@ const Card = ({ image }: { image: IImage }) => {
                 image.transformationType as TransformationTypeKey
               ].icon
             }`}
-            alt={image.title}
+            alt={image.title ?? "icon"}
             width={24}
             height={24}
           />
